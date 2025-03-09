@@ -1,0 +1,11 @@
+1) g++ -pg -o test myprogram.cpp
+
+2) ./test
+
+3) gprof -b test gmon.out >analysis.txt
+
+4) gprof -b -p test
+
+5) gprof2dot -f prof analysis.txt -o analysis.dot
+
+6) dot -Tpng analysis.dot -o profiling_tree.png

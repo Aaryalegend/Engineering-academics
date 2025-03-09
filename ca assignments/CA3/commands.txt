@@ -1,0 +1,9 @@
+g++ -fopenmp -o matrix_multiplication matrix.cpp
+./a.out
+set datafile separator ","
+set title "Matrix Multiplication Time vs. Number of Threads"
+set xlabel "Number of Threads"
+set ylabel "Time (seconds)"
+set grid
+set style data linespoints
+plot "times.csv" using 1:2 with linespoints title "Execution Time"
